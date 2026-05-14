@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 题目切换：左滑入、右淡出 */
+.slide-enter-active {
+  transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.slide-leave-active {
+  transition: all 0.22s ease-in;
+  position: absolute;
+  width: 100%;
+}
+.slide-enter-from {
+  opacity: 0;
+  transform: translateX(36px);
+}
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-24px);
+}
